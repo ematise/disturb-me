@@ -125,10 +125,6 @@ app.post("/register", (request, response) => {
         });
 });
 
-app.listen(3000, function() {
-    console.log('app started and listening to port 3000')
-})
-
 // execute database connection
 dbConnect();
 
