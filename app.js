@@ -141,3 +141,5 @@ app.use((req, res, next) => {
     );
     next();
 });
+
+module.exports = app;
