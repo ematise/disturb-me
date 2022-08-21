@@ -25,9 +25,12 @@ app.get("/auth-endpoint", auth, (request, response) => {
     response.json({ message: "You are authorized to access me" });
 });
 
-app.get("/", (request, response, next) => {
-    response.json({ message: "Hey! This is your server response!" });
-    next();
+app.get("/users", (request, response, next) => {
+    User.find().then((users) => {
+        return response.status(200).send({
+            users
+        })
+    })
 });
 
 // login endpoint

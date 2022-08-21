@@ -8,7 +8,7 @@ const UserSchema = new mongoose.Schema({
     phone: {
         type: String,
         required: false,
-        unique: [true, "Phone exists"],
+        unique: false,
     },
     password: {
         type: String,
